@@ -1,5 +1,49 @@
 @font-face {
-    font-family: "hankengrotesk-bold";
-    src: url("/wp-content/themes/chc/assets/fonts/hankengrotesk-bold.ttf") format('truetype');
+    font-family: "archivo-medium";
+    src: url("/wp-content/themes/lionsden-wp/assets/fonts/archivo-medium.ttf") format('truetype');
     font-weight: 400;
+}
+
+@font-face {
+    font-family: "archivo-regular";
+    src: url("/wp-content/themes/lionsden-wp/assets/fonts/archivo-regular.ttf") format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "archivo-thin";
+    src: url("/wp-content/themes/lionsden-wp/assets/fonts/archivo-thin.ttf") format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "manrope-medium";
+    src: url("/wp-content/themes/lionsden-wp/assets/fonts/manrope-medium.ttf") format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "manrope-regular";
+    src: url("/wp-content/themes/lionsden-wp/assets/fonts/manrope-regular.ttf") format('truetype');
+    font-weight: 400;
+}
+
+.archivo-medium {
+    font-family: "archivo-medium";
+}
+
+.archivo-regular {
+    font-family: "archivo-regular";
+}
+
+.archivo-thin {
+    font-family: "archivo-thin";
+}
+
+.manrope-medium {
+    font-family: "manrope-medium";
+}
+
+.manrope-regular {
+    font-family: "manrope-regular";
 }

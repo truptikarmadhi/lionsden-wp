@@ -1,0 +1,28 @@
+.full-media{
+    height: 628px;
+
+ @include media-breakpoint-down(lg){
+        height: 442px;
+    }
+
+ @include media-breakpoint-down(md){
+        height: 207px;
+    }
+    .play-video-btn{
+        img{
+            height: 58px;
+
+             @include media-breakpoint-down(md){
+        height: 46px;
+    }
+        }
+    }
+}
+
+.full-media-slider-section{
+    height: 650px;
+
+    @include media-breakpoint-down(lg){
+        height: 378px;
+    }
+}

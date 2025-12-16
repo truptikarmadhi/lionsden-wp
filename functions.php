@@ -68,14 +68,107 @@ if (function_exists('acf_add_options_page')) {
   );
 }
 
-function enqueue_custom_scripts()
-{
-  wp_enqueue_script('jquery');
-  wp_enqueue_script('custom-ajax', get_template_directory_uri('/resources/assets/scripts/parts/handlebar.js'), ['jquery'], '1.0', true);
+add_filter('wpcf7_autop_or_not', '__return_false');
 
-  wp_localize_script('custom-ajax', 'ajax_params', [
-    'ajax_url' => admin_url('admin-ajax.php'),
-  ]);
+add_image_size('gallery-thumb', 400, 0, true);
+add_image_size('medium', 1200, 0, true);
+add_image_size('fullscreen', 2700, 0, true);
+
+// testimonials
+add_action('init', 'testimonials');
+function testimonials()
+{
+  register_post_type(
+    'testimonials',
+    array(
+      'labels' => array(
+        'name' => __("Testimonials", 'textdomain'),
+        'singular_name' => __("Testimonials", 'textdomain'),
+        'add_new' => __("Add testimonial"),
+        'add_new_item' => __("Add testimonial"),
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'testimonial', 'with_front' => false),
+      'supports' => array('title', 'editor', 'thumbnail', 'page-attributes'),
+    )
+  );
 }
 
-add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
+// services
+add_action('init', 'services');
+function services()
+{
+  register_post_type(
+    'services',
+    array(
+      'labels' => array(
+        'name' => __("Services", 'textdomain'),
+        'singular_name' => __("Services", 'textdomain'),
+        'add_new' => __("Add service"),
+        'add_new_item' => __("Add service"),
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'services', 'with_front' => false),
+      'supports' => array('title', 'editor', 'thumbnail', 'page-attributes'),
+    )
+  );
+}
+
+function convert_youtube_to_embed($url)
+{
+
+  if (empty($url) || !is_string($url)) {
+    return $url;
+  }
+
+  $watch_pattern = '/^(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?v=([a-zA-Z0-9_-]+)/';
+
+  $short_pattern = '/^(?:https?:\/\/)?(?:www\.)?youtu\.be\/([a-zA-Z0-9_-]+)/';
+
+  if (preg_match($watch_pattern, $url, $matches)) {
+    $video_id = $matches[1];
+    return 'https://www.youtube.com/embed/' . $video_id;
+  }
+
+  if (preg_match($short_pattern, $url, $matches)) {
+    $video_id = $matches[1];
+    return 'https://www.youtube.com/embed/' . $video_id;
+  }
+
+  if (strpos($url, 'youtube.com/embed/') !== false) {
+    return $url;
+  }
+
+  return $url;
+}
+
+
+function get_youtube_video_id($url)
+{
+
+  if (empty($url) || !is_string($url)) {
+    return false;
+  }
+
+  $watch_pattern = '/^(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?v=([a-zA-Z0-9_-]+)/';
+
+  $short_pattern = '/^(?:https?:\/\/)?(?:www\.)?youtu\.be\/([a-zA-Z0-9_-]+)/';
+
+  $embed_pattern = '/^(?:https?:\/\/)?(?:www\.)?youtube\.com\/embed\/([a-zA-Z0-9_-]+)/';
+
+  if (preg_match($watch_pattern, $url, $matches)) {
+    return $matches[1];
+  }
+
+  if (preg_match($short_pattern, $url, $matches)) {
+    return $matches[1];
+  }
+
+  if (preg_match($embed_pattern, $url, $matches)) {
+    return $matches[1];
+  }
+
+  return false;
+}

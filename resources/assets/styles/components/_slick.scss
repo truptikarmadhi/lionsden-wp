@@ -1,0 +1,147 @@
+.hero-main-slider {
+
+    .slick-list,
+    .slick-track {
+        height: 100%;
+
+        .slick-slide {
+            &>div {
+                height: 100%;
+            }
+        }
+    }
+
+    .hero-content {
+        @include media-breakpoint-down(xxl) {
+            height: calc(100vh - 190px) !important;
+        }
+
+        @include media-breakpoint-up(xxxl) {
+            height: 100vh !important;
+        }
+    }
+
+    .slick-dots {
+        position: absolute;
+        top: 0px;
+        right: 40px;
+        display: flex;
+        align-items: end;
+        padding-bottom: 75px;
+
+        @include media-breakpoint-down(xxl) {
+            height: calc(100vh - 190px) !important;
+        }
+
+        @include media-breakpoint-up(xxxl) {
+            height: 100vh !important;
+        }
+
+        li {
+            height: 3px;
+            width: 50px;
+            opacity: 50%;
+            background-color: $white;
+            list-style: none;
+
+            &:first-child {
+                border-bottom-left-radius: 20px;
+                border-top-left-radius: 20px;
+            }
+
+            &:last-child {
+                border-bottom-right-radius: 20px;
+                border-top-right-radius: 20px;
+            }
+
+            &.slick-active {
+                opacity: 100%;
+                border-radius: 20px;
+            }
+
+            button {
+                display: none;
+            }
+        }
+    }
+}
+
+.brand-slider {
+    .slick-list {
+        overflow: visible !important;
+
+        .slick-track {
+            display: flex !important;
+            align-items: center;
+        }
+    }
+}
+
+.about-us-slider {
+    .slick-list {
+        height: 100%;
+
+        @include media-breakpoint-down(lg) {
+            overflow: visible !important;
+        }
+
+        margin-left: -20px !important;
+        margin-right: -20px !important;
+
+        .slick-track {
+            height: 100%;
+            display: flex !important;
+
+            .slick-slide {
+                height: auto !important;
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+
+                &>div {
+                    height: 100%;
+                }
+            }
+
+            @include media-breakpoint-down(lg) {
+                margin-left: -6px !important;
+                margin-right: -6px !important;
+
+                .slick-slide {
+                    padding-left: 6px !important;
+                    padding-right: 6px !important;
+                }
+            }
+        }
+    }
+}
+
+.testimonial-section {
+
+    .prev-arrow,
+    .next-arrow {
+        height: 23px;
+
+        &.slick-disabled {
+            opacity: 40%;
+        }
+    }
+}
+
+.full-media-slider-section {
+    .slick-arrows {
+        @include media-breakpoint-down(lg) {
+            height: auto !important;
+        }
+
+        .slick-arrow {
+            width: 38px;
+            height: 38px;
+        }
+    }
+}
+
+.full-media-slider {
+    div {
+        height: 100%;
+    }
+}

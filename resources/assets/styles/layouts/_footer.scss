@@ -1,0 +1,19 @@
+.footer {
+    border-top-left-radius: $radius30;
+    border-top-right-radius: $radius30;
+
+    .social-icon-group {
+        .social-icon {
+            height: 19px;
+            height: 19px;
+
+            &:last-child {
+                margin-right: 0px !important;
+            }
+        }
+    }
+
+    .footer-line {
+        border-top: 1px solid rgba($color: $color-F1F1F1, $alpha: 0.3);
+    }
+}

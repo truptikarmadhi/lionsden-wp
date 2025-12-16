@@ -1,0 +1,49 @@
+.hero-section {
+    @include media-breakpoint-up(lg){
+        height: 1072px;
+    }
+    .hero-img{
+        height: 432px;
+    }
+    .hero-bg-layer{
+        background: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .hero-btns{
+        .btnA{
+            &:nth-child(2){
+                background-color: transparent !important;
+                border-radius: 0px !important;
+                letter-spacing: $space-0_32 !important;
+                color: $color-F1F1F1 !important;
+                text-decoration: underline !important;
+
+                img{
+                    display: none !important;
+                }
+            }
+        }
+    }
+}
+
+.brand-slider{
+    .brand-logo{
+        width: 105px;
+    }
+}
+
+.service-section{
+    background-color: rgba($color: $color-223E4F, $alpha: 0.9);
+}
+
+.testimonial-section{
+    .testimonial-img{
+        height: 81px;
+        width: 100% !important;
+        max-width: 81px;
+
+        img{
+            height: 50px;
+        }
+    }
+}

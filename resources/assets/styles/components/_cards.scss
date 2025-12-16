@@ -10,3 +10,70 @@
         }
     }
 }
+
+.counter-card {
+    background-color: rgba($color: $white, $alpha: 0.2);
+    padding: 43px 53px;
+
+    @include media-breakpoint-down(lg) {
+        background-color: rgba($color: $white, $alpha: 0.6);
+        padding: 29px 43px;
+    }
+}
+
+.who-we-card {
+    background-color: rgba($color: $white, $alpha: 0.5);
+    padding: 38px 30px;
+    box-shadow: 0px 0px 14px rgba($color: $black, $alpha: 0.05);
+
+    @include media-breakpoint-down(lg) {
+        padding: 21px;
+    }
+}
+
+.service-cards {
+    background-color: rgba($color: $white, $alpha: 0.1);
+    padding: 38px 33px;
+
+    @include media-breakpoint-down(lg) {
+        padding: 25px 22px;
+    }
+
+    .service-img {
+        height: 200px;
+
+        @include media-breakpoint-down(lg) {
+            height: 102px;
+        }
+    }
+
+    .arrow {
+        height: 38px;
+        width: 38px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+        .arrow {
+            transform: rotate(45deg);
+        }
+    }
+}
+
+.about-us-cards {
+    background-color: rgba($color: $white, $alpha: 0.8);
+    box-shadow: 0px 0px 31px rgba($color: $black, $alpha: 0.05);
+    padding: 38px 33px;
+
+    @include media-breakpoint-down(lg) {
+        padding: 29px 22px;
+    }
+
+    .about-us-img {
+        height: 337px;
+
+        @include media-breakpoint-down(lg) {
+            height: 214px;
+        }
+    }
+}

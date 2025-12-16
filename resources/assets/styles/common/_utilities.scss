@@ -1,0 +1,313 @@
+.bg-EF9F00 {
+    background-color: $color-EF9F00;
+}
+
+.bg-223E4F {
+    background-color: $color-223E4F;
+}
+
+.bg-F1F1F1 {
+    background-color: $color-F1F1F1;
+}
+
+.text-EF9F00 {
+    color: $color-EF9F00;
+}
+
+.text-223E4F {
+    color: $color-223E4F;
+}
+
+.text-F1F1F1 {
+    color: $color-F1F1F1;
+}
+
+.font14 {
+    font-size: $font14;
+}
+
+.font16 {
+    font-size: $font16;
+}
+
+.font18 {
+    font-size: $font18;
+}
+
+.font20 {
+    font-size: $font20;
+}
+
+.font22 {
+    font-size: $font22;
+}
+
+.font24 {
+    font-size: $font24;
+}
+
+.font26 {
+    font-size: $font26;
+}
+
+.font36 {
+    font-size: $font36;
+}
+
+.font46 {
+    font-size: $font46;
+}
+
+.font56 {
+    font-size: $font56;
+}
+
+.font66 {
+    font-size: $font66;
+}
+
+.font76 {
+    font-size: $font76;
+}
+
+.leading20 {
+    line-height: $leading20;
+}
+
+.leading22 {
+    line-height: $leading22;
+}
+
+.leading24 {
+    line-height: $leading24;
+}
+
+.leading26 {
+    line-height: $leading26;
+}
+
+.leading28 {
+    line-height: $leading28;
+}
+
+.leading36 {
+    line-height: $leading36;
+}
+
+.leading48 {
+    line-height: $leading48;
+}
+
+.leading58 {
+    line-height: $leading58;
+}
+
+.leading70 {
+    line-height: $leading70;
+}
+
+.space-0_16 {
+    letter-spacing: $space-0_16;
+}
+
+.space-0_32 {
+    letter-spacing: $space-0_32;
+}
+
+.space-0_48 {
+    letter-spacing: $space-0_48;
+}
+
+.radius10 {
+    border-radius: $radius10;
+}
+
+.radius15 {
+    border-radius: $radius15;
+}
+
+.radius30 {
+    border-radius: $radius30;
+}
+
+.radius74 {
+    border-radius: $radius74;
+}
+
+.opacity10 {
+    opacity: $opacity10;
+}
+
+.opacity20 {
+    opacity: $opacity20;
+}
+
+.opacity30 {
+    opacity: $opacity30;
+}
+
+.opacity70 {
+    opacity: $opacity70;
+}
+
+.opacity90 {
+    opacity: $opacity90;
+}
+
+@include media-breakpoint-down(lg) {
+    .res-text-EF9F00 {
+        color: $color-EF9F00 !important;
+    }
+
+    .res-text-223E4F {
+        color: $color-223E4F !important;
+    }
+
+    .res-font14 {
+        font-size: $font14;
+    }
+
+    .res-font16 {
+        font-size: $font16;
+    }
+
+    .res-font18 {
+        font-size: $font18;
+    }
+
+    .res-font20 {
+        font-size: $font20;
+    }
+
+    .res-font22 {
+        font-size: $font22;
+    }
+
+    .res-font24 {
+        font-size: $font24;
+    }
+
+    .res-font26 {
+        font-size: $font26;
+    }
+
+    .res-font36 {
+        font-size: $font36;
+    }
+
+    .res-font46 {
+        font-size: $font46;
+    }
+
+    .res-font56 {
+        font-size: $font56;
+    }
+
+    .res-font66 {
+        font-size: $font66;
+    }
+
+    .res-font76 {
+        font-size: $font76;
+    }
+
+    .res-font12 {
+        font-size: $res-font12;
+    }
+
+    .res-font30 {
+        font-size: $res-font30;
+    }
+
+    .res-leading20 {
+        line-height: $leading20;
+    }
+
+    .res-leading22 {
+        line-height: $leading22;
+    }
+
+    .res-leading24 {
+        line-height: $leading24;
+    }
+
+    .res-leading26 {
+        line-height: $leading26;
+    }
+
+    .res-leading28 {
+        line-height: $leading28;
+    }
+
+    .res-leading48 {
+        line-height: $leading48;
+    }
+
+    .res-leading58 {
+        line-height: $leading58;
+    }
+
+    .res-leading70 {
+        line-height: $leading70;
+    }
+
+    .res-leading38 {
+        line-height: $res-leading38;
+    }
+
+    .res-leading36 {
+        line-height: $leading36;
+    }
+
+    .res-leading78 {
+        line-height: $res-leading78;
+    }
+
+    .res-space-0_16 {
+        letter-spacing: $space-0_16;
+    }
+
+    .res-space-0_32 {
+        letter-spacing: $space-0_32;
+    }
+
+    .res-space-0_48 {
+        letter-spacing: $space-0_48;
+    }
+
+    .res-radius10 {
+        border-radius: $radius10;
+    }
+
+    .res-radius15 {
+        border-radius: $radius15;
+    }
+
+    .res-radius30 {
+        border-radius: $radius30;
+    }
+
+    .res-radius74 {
+        border-radius: $radius74;
+    }
+
+    .res-opacity10 {
+        opacity: $opacity10;
+    }
+    
+    .res-radius0 {
+        border-radius: $res-radius0;
+    }
+
+    .res-opacity20 {
+        opacity: $opacity20;
+    }
+
+    .res-opacity70 {
+        opacity: $opacity70;
+    }
+
+    .res-opacity90 {
+        opacity: $opacity90;
+    }
+}

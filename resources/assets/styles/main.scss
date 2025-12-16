@@ -1,9 +1,8 @@
 @import "common/_variables";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 //sick
+@import "~@fancyapps/ui/dist/fancybox/fancybox.css";
 @import "../../node_modules/slick-carousel/slick/slick.scss";
-@import "../../node_modules/swiper/swiper-bundle.css";
-
 @import '../../node_modules/bootstrap/scss/functions';
 @import '../../node_modules/bootstrap/scss/variables';
 // Animation
@@ -39,3 +38,5 @@ $grid-breakpoints: (
 @import "pages/_home";
 // parts css
 @import "parts/hero";
+@import "parts/media";
+@import "parts/leftright";
